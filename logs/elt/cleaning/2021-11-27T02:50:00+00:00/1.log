@@ -1,0 +1,193 @@
+[2021-11-27 09:51:07,389] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.cleaning scheduled__2021-11-27T02:50:00+00:00 [queued]>
+[2021-11-27 09:51:07,392] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.cleaning scheduled__2021-11-27T02:50:00+00:00 [queued]>
+[2021-11-27 09:51:07,397] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.cleaning scheduled__2021-11-27T02:50:00+00:00 [queued]>
+[2021-11-27 09:51:07,397] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 09:51:07,397] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 09:51:07,397] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 09:51:07,399] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.cleaning scheduled__2021-11-27T02:50:00+00:00 [queued]>
+[2021-11-27 09:51:07,399] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 09:51:07,399] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 09:51:07,399] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 09:51:07,409] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): cleaning> on 2021-11-27 02:50:00+00:00
+[2021-11-27 09:51:07,415] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): cleaning> on 2021-11-27 02:50:00+00:00
+[2021-11-27 09:51:07,412] {standard_task_runner.py:52} INFO - Started process 5083 to run task
+[2021-11-27 09:51:07,418] {standard_task_runner.py:52} INFO - Started process 5084 to run task
+[2021-11-27 09:51:07,421] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'elt', 'cleaning', 'scheduled__2021-11-27T02:50:00+00:00', '--job-id', '234', '--raw', '--subdir', 'DAGS_FOLDER/processing.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmp1bf71833', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmplhprdzl9']
+[2021-11-27 09:51:07,423] {standard_task_runner.py:77} INFO - Job 234: Subtask cleaning
+[2021-11-27 09:51:07,423] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'elt', 'cleaning', 'scheduled__2021-11-27T02:50:00+00:00', '--job-id', '235', '--raw', '--subdir', 'DAGS_FOLDER/processing.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpbvwqd3qb', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpgm6amjdq']
+[2021-11-27 09:51:07,425] {standard_task_runner.py:77} INFO - Job 235: Subtask cleaning
+[2021-11-27 09:51:07,484] {logging_mixin.py:109} INFO - Running <TaskInstance: elt.cleaning scheduled__2021-11-27T02:50:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-11-27 09:51:07,487] {logging_mixin.py:109} INFO - Running <TaskInstance: elt.cleaning scheduled__2021-11-27T02:50:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-11-27 09:51:07,535] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=elt
+AIRFLOW_CTX_TASK_ID=cleaning
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-27T02:50:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-11-27T02:50:00+00:00
+[2021-11-27 09:51:07,537] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 09:51:07,538] {subprocess.py:74} INFO - Running command: ['bash', '-c', '/Users/Home/Airflow/tasks/cleaning.py /Users/Home/Airflow/unzip /Users/Home/Airflow/output']
+[2021-11-27 09:51:07,547] {subprocess.py:85} INFO - Output:
+[2021-11-27 09:51:07,530] {taskinstance.py:1703} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: rendered_task_instance_fields.dag_id, rendered_task_instance_fields.task_id, rendered_task_instance_fields.execution_date
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1332, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1422, in _execute_task_with_callbacks
+    RenderedTaskInstanceFields.write(RenderedTaskInstanceFields(ti=self, render_templates=False))
+  File "/usr/local/lib/python3.9/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9/contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "/usr/local/lib/python3.9/site-packages/airflow/utils/session.py", line 32, in create_session
+    session.commit()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1046, in commit
+    self.transaction.commit()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 504, in commit
+    self._prepare_impl()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 483, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2540, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2682, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2642, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 239, in save_obj
+    _emit_insert_statements(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 1083, in _emit_insert_statements
+    c = cached_connections[connection].execute(statement, multiparams)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: rendered_task_instance_fields.dag_id, rendered_task_instance_fields.task_id, rendered_task_instance_fields.execution_date
+[SQL: INSERT INTO rendered_task_instance_fields (dag_id, task_id, execution_date, rendered_fields, k8s_pod_yaml) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('elt', 'cleaning', '2021-11-27 02:50:00.000000', '{"bash_command": "/Users/Home/Airflow/tasks/cleaning.py /Users/Home/Airflow/unzip /Users/Home/Airflow/output", "env": null}', 'null')]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+[2021-11-27 09:51:07,557] {taskinstance.py:1270} INFO - Marking task as UP_FOR_RETRY. dag_id=elt, task_id=cleaning, execution_date=20211127T025000, start_date=20211127T025107, end_date=20211127T025107
+[2021-11-27 09:51:07,569] {standard_task_runner.py:88} ERROR - Failed to execute job 235 for task cleaning
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: rendered_task_instance_fields.dag_id, rendered_task_instance_fields.task_id, rendered_task_instance_fields.execution_date
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/usr/local/lib/python3.9/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 292, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/usr/local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/usr/local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/usr/local/lib/python3.9/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1332, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1422, in _execute_task_with_callbacks
+    RenderedTaskInstanceFields.write(RenderedTaskInstanceFields(ti=self, render_templates=False))
+  File "/usr/local/lib/python3.9/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/Cellar/python@3.9/3.9.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9/contextlib.py", line 126, in __exit__
+    next(self.gen)
+  File "/usr/local/lib/python3.9/site-packages/airflow/utils/session.py", line 32, in create_session
+    session.commit()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1046, in commit
+    self.transaction.commit()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 504, in commit
+    self._prepare_impl()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 483, in _prepare_impl
+    self.session.flush()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2540, in flush
+    self._flush(objects)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2682, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 2642, in _flush
+    flush_context.execute()
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 586, in execute
+    persistence.save_obj(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 239, in save_obj
+    _emit_insert_statements(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 1083, in _emit_insert_statements
+    c = cached_connections[connection].execute(statement, multiparams)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 608, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: rendered_task_instance_fields.dag_id, rendered_task_instance_fields.task_id, rendered_task_instance_fields.execution_date
+[SQL: INSERT INTO rendered_task_instance_fields (dag_id, task_id, execution_date, rendered_fields, k8s_pod_yaml) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('elt', 'cleaning', '2021-11-27 02:50:00.000000', '{"bash_command": "/Users/Home/Airflow/tasks/cleaning.py /Users/Home/Airflow/unzip /Users/Home/Airflow/output", "env": null}', 'null')]
+(Background on this error at: http://sqlalche.me/e/13/gkpj)
+[2021-11-27 09:51:07,604] {local_task_job.py:154} INFO - Task exited with return code 1
+[2021-11-27 09:51:07,642] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2021-11-27 09:51:07,692] {subprocess.py:89} INFO - API_DT.ODA.ODAT.CD_DS2_en_csv_v2_3160773.csv
+[2021-11-27 09:51:07,692] {subprocess.py:89} INFO - API_SH.STA.STNT.ZS_DS2_en_csv_v2_3165495.csv
+[2021-11-27 09:51:07,692] {subprocess.py:89} INFO - API_DT.ODA.ODAT.PC.ZS_DS2_en_csv_v2_3160336.csv
+[2021-11-27 09:51:07,693] {subprocess.py:89} INFO - API_SH.DYN.AIDS.ZS_DS2_en_csv_v2_3158949.csv
+[2021-11-27 09:51:07,693] {subprocess.py:89} INFO - API_SM.POP.NETM_DS2_en_csv_v2_3158896.csv
+[2021-11-27 09:51:07,693] {subprocess.py:89} INFO - API_SI.POV.DDAY_DS2_en_csv_v2_3160009.csv
+[2021-11-27 09:51:07,693] {subprocess.py:89} INFO - API_SH.STA.ANVC.ZS_DS2_en_csv_v2_3165465.csv
+[2021-11-27 09:51:07,697] {subprocess.py:93} INFO - Command exited with return code 0
+[2021-11-27 09:51:07,714] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=elt, task_id=cleaning, execution_date=20211127T025000, start_date=20211127T025107, end_date=20211127T025107
+[2021-11-27 09:51:07,767] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-11-27 09:51:07,788] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

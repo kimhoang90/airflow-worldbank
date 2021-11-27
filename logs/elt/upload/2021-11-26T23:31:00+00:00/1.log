@@ -1,0 +1,39 @@
+[2021-11-27 07:04:46,035] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.upload scheduled__2021-11-26T23:31:00+00:00 [queued]>
+[2021-11-27 07:04:46,042] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.upload scheduled__2021-11-26T23:31:00+00:00 [queued]>
+[2021-11-27 07:04:46,042] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 07:04:46,043] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 07:04:46,043] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 07:04:46,051] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): upload> on 2021-11-26 23:31:00+00:00
+[2021-11-27 07:04:46,053] {standard_task_runner.py:52} INFO - Started process 3385 to run task
+[2021-11-27 07:04:46,058] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'elt', 'upload', 'scheduled__2021-11-26T23:31:00+00:00', '--job-id', '92', '--raw', '--subdir', 'DAGS_FOLDER/processing.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpmxrj00rj', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmplw__rji1']
+[2021-11-27 07:04:46,060] {standard_task_runner.py:77} INFO - Job 92: Subtask upload
+[2021-11-27 07:04:51,093] {logging_mixin.py:109} INFO - Running <TaskInstance: elt.upload scheduled__2021-11-26T23:31:00+00:00 [running]> on host MacBookPro.local
+[2021-11-27 07:04:56,151] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=elt
+AIRFLOW_CTX_TASK_ID=upload
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-26T23:31:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-11-26T23:31:00+00:00
+[2021-11-27 07:04:56,152] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 07:04:56,153] {subprocess.py:74} INFO - Running command: ['bash', '-c', '/Users/Home/Airflow/tasks/cleaning.py /Users/Home/Airflow/output worldbank']
+[2021-11-27 07:04:56,160] {subprocess.py:85} INFO - Output:
+[2021-11-27 07:04:56,208] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_NV.AGR.TOTL.ZS_DS2_en_csv_v2_3160861.csv: No such file or directory
+[2021-11-27 07:04:56,213] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.IRIG.AG.ZS_DS2_en_csv_v2_3163914.csv: No such file or directory
+[2021-11-27 07:04:56,219] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.ARBL.ZS_DS2_en_csv_v2_3161161.csv: No such file or directory
+[2021-11-27 07:04:56,223] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.TRAC.ZS_DS2_en_csv_v2_3163924.csv: No such file or directory
+[2021-11-27 07:04:56,228] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.ARBL.HA.PC_DS2_en_csv_v2_3163892.csv: No such file or directory
+[2021-11-27 07:04:56,233] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.AGRI.ZS_DS2_en_csv_v2_3163149.csv: No such file or directory
+[2021-11-27 07:04:56,234] {subprocess.py:89} INFO - API_NV.AGR.TOTL.ZS_DS2_en_csv_v2_3160861.csv
+[2021-11-27 07:04:56,234] {subprocess.py:89} INFO - API_AG.LND.IRIG.AG.ZS_DS2_en_csv_v2_3163914.csv
+[2021-11-27 07:04:56,234] {subprocess.py:89} INFO - API_AG.LND.ARBL.ZS_DS2_en_csv_v2_3161161.csv
+[2021-11-27 07:04:56,234] {subprocess.py:89} INFO - API_AG.LND.TRAC.ZS_DS2_en_csv_v2_3163924.csv
+[2021-11-27 07:04:56,235] {subprocess.py:89} INFO - API_AG.LND.ARBL.HA.PC_DS2_en_csv_v2_3163892.csv
+[2021-11-27 07:04:56,235] {subprocess.py:89} INFO - API_AG.LND.AGRI.ZS_DS2_en_csv_v2_3163149.csv
+[2021-11-27 07:04:56,238] {subprocess.py:93} INFO - Command exited with return code 0
+[2021-11-27 07:04:56,253] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=elt, task_id=upload, execution_date=20211126T233100, start_date=20211127T000446, end_date=20211127T000456
+[2021-11-27 07:04:56,283] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-11-27 07:04:56,300] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

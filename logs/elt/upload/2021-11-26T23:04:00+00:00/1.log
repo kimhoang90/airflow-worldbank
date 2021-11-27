@@ -1,0 +1,105 @@
+[2021-11-27 06:05:14,880] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.upload scheduled__2021-11-26T23:04:00+00:00 [queued]>
+[2021-11-27 06:05:14,886] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.upload scheduled__2021-11-26T23:04:00+00:00 [queued]>
+[2021-11-27 06:05:14,886] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 06:05:14,886] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 06:05:14,886] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 06:05:14,895] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): upload> on 2021-11-26 23:04:00+00:00
+[2021-11-27 06:05:14,897] {standard_task_runner.py:52} INFO - Started process 1603 to run task
+[2021-11-27 06:05:14,902] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'elt', 'upload', 'scheduled__2021-11-26T23:04:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/processing.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpv19qplle', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpvkcl7en5']
+[2021-11-27 06:05:14,905] {standard_task_runner.py:77} INFO - Job 6: Subtask upload
+[2021-11-27 06:05:14,936] {logging_mixin.py:109} INFO - Running <TaskInstance: elt.upload scheduled__2021-11-26T23:04:00+00:00 [running]> on host MacBookPro.local
+[2021-11-27 06:05:14,963] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=elt
+AIRFLOW_CTX_TASK_ID=upload
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-26T23:04:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-11-26T23:04:00+00:00
+[2021-11-27 06:05:14,963] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 06:05:14,964] {subprocess.py:74} INFO - Running command: ['bash', '-c', '/Users/Home/Airflow/tasks/cleaning.py /Users/Home/Airflow/output worldbank']
+[2021-11-27 06:05:14,969] {subprocess.py:85} INFO - Output:
+[2021-11-27 06:05:15,020] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SH.STA.MMRT_DS2_en_csv_v2_3159367.csv: No such file or directory
+[2021-11-27 06:05:15,026] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_DT.ODA.ODAT.CD_DS2_en_csv_v2_3160773.csv: No such file or directory
+[2021-11-27 06:05:15,032] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SH.DYN.MORT_DS2_en_csv_v2_3162033.csv: No such file or directory
+[2021-11-27 06:05:15,037] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.CROP.ZS_DS2_en_csv_v2_3163899.csv: No such file or directory
+[2021-11-27 06:05:15,043] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SH.STA.STNT.ZS_DS2_en_csv_v2_3165495.csv: No such file or directory
+[2021-11-27 06:05:15,048] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_NV.AGR.TOTL.ZS_DS2_en_csv_v2_3160861.csv: No such file or directory
+[2021-11-27 06:05:15,054] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.IRIG.AG.ZS_DS2_en_csv_v2_3163914.csv: No such file or directory
+[2021-11-27 06:05:15,059] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_DT.ODA.ODAT.GN.ZS_DS2_en_csv_v2_3161196.csv: No such file or directory
+[2021-11-27 06:05:15,065] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_DT.ODA.ODAT.MP.ZS_DS2_en_csv_v2_3161055.csv: No such file or directory
+[2021-11-27 06:05:15,071] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_DT.ODA.ODAT.PC.ZS_DS2_en_csv_v2_3160336.csv: No such file or directory
+[2021-11-27 06:05:15,076] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.PRD.LVSK.XD_DS2_en_csv_v2_3161120.csv: No such file or directory
+[2021-11-27 06:05:15,082] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.FRST.K2_DS2_en_csv_v2_3159335.csv: No such file or directory
+[2021-11-27 06:05:15,088] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.CON.FERT.ZS_DS2_en_csv_v2_3159437.csv: No such file or directory
+[2021-11-27 06:05:15,093] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.TOTL.K2_DS2_en_csv_v2_3159087.csv: No such file or directory
+[2021-11-27 06:05:15,099] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SP.RUR.TOTL.ZS_DS2_en_csv_v2_3160121.csv: No such file or directory
+[2021-11-27 06:05:15,104] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SH.TBS.INCD_DS2_en_csv_v2_3165510.csv: No such file or directory
+[2021-11-27 06:05:15,110] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SE.PRM.CMPT.ZS_DS2_en_csv_v2_3163677.csv: No such file or directory
+[2021-11-27 06:05:15,115] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SH.DYN.AIDS.ZS_DS2_en_csv_v2_3158949.csv: No such file or directory
+[2021-11-27 06:05:15,121] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.CREL.HA_DS2_en_csv_v2_3163897.csv: No such file or directory
+[2021-11-27 06:05:15,127] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.FRST.ZS_DS2_en_csv_v2_3158992.csv: No such file or directory
+[2021-11-27 06:05:15,133] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.ARBL.ZS_DS2_en_csv_v2_3161161.csv: No such file or directory
+[2021-11-27 06:05:15,138] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_DT.ODA.ODAT.XP.ZS_DS2_en_csv_v2_3164297.csv: No such file or directory
+[2021-11-27 06:05:15,144] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SM.POP.NETM_DS2_en_csv_v2_3158896.csv: No such file or directory
+[2021-11-27 06:05:15,150] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SI.POV.DDAY_DS2_en_csv_v2_3160009.csv: No such file or directory
+[2021-11-27 06:05:15,155] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.TRAC.ZS_DS2_en_csv_v2_3163924.csv: No such file or directory
+[2021-11-27 06:05:15,161] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.YLD.CREL.KG_DS2_en_csv_v2_3163929.csv: No such file or directory
+[2021-11-27 06:05:15,166] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SP.RUR.TOTL_DS2_en_csv_v2_3163192.csv: No such file or directory
+[2021-11-27 06:05:15,172] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SE.ENR.PRSC.FM.ZS_DS2_en_csv_v2_3165231.csv: No such file or directory
+[2021-11-27 06:05:15,178] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.PRD.FOOD.XD_DS2_en_csv_v2_3159905.csv: No such file or directory
+[2021-11-27 06:05:15,183] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SL.AGR.EMPL.MA.ZS_DS2_en_csv_v2_3165572.csv: No such file or directory
+[2021-11-27 06:05:15,189] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SH.STA.ANVC.ZS_DS2_en_csv_v2_3165465.csv: No such file or directory
+[2021-11-27 06:05:15,194] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_DT.ODA.ODAT.GI.ZS_DS2_en_csv_v2_3164289.csv: No such file or directory
+[2021-11-27 06:05:15,200] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SL.AGR.EMPL.FE.ZS_DS2_en_csv_v2_3165570.csv: No such file or directory
+[2021-11-27 06:05:15,206] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.SRF.TOTL.K2_DS2_en_csv_v2_3160371.csv: No such file or directory
+[2021-11-27 06:05:15,211] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_BX.GRT.EXTA.CD.WD_DS2_en_csv_v2_3163964.csv: No such file or directory
+[2021-11-27 06:05:15,217] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.PRD.CROP.XD_DS2_en_csv_v2_3159593.csv: No such file or directory
+[2021-11-27 06:05:15,223] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_SI.DST.FRST.20_DS2_en_csv_v2_3165548.csv: No such file or directory
+[2021-11-27 06:05:15,228] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.ARBL.HA.PC_DS2_en_csv_v2_3163892.csv: No such file or directory
+[2021-11-27 06:05:15,233] {subprocess.py:89} INFO - rm: /Users/Home/Airflow/output/*API_AG.LND.AGRI.ZS_DS2_en_csv_v2_3163149.csv: No such file or directory
+[2021-11-27 06:05:15,234] {subprocess.py:89} INFO - API_SH.STA.MMRT_DS2_en_csv_v2_3159367.csv
+[2021-11-27 06:05:15,234] {subprocess.py:89} INFO - API_DT.ODA.ODAT.CD_DS2_en_csv_v2_3160773.csv
+[2021-11-27 06:05:15,234] {subprocess.py:89} INFO - API_SH.DYN.MORT_DS2_en_csv_v2_3162033.csv
+[2021-11-27 06:05:15,234] {subprocess.py:89} INFO - API_AG.LND.CROP.ZS_DS2_en_csv_v2_3163899.csv
+[2021-11-27 06:05:15,234] {subprocess.py:89} INFO - API_SH.STA.STNT.ZS_DS2_en_csv_v2_3165495.csv
+[2021-11-27 06:05:15,235] {subprocess.py:89} INFO - API_NV.AGR.TOTL.ZS_DS2_en_csv_v2_3160861.csv
+[2021-11-27 06:05:15,235] {subprocess.py:89} INFO - API_AG.LND.IRIG.AG.ZS_DS2_en_csv_v2_3163914.csv
+[2021-11-27 06:05:15,235] {subprocess.py:89} INFO - API_DT.ODA.ODAT.GN.ZS_DS2_en_csv_v2_3161196.csv
+[2021-11-27 06:05:15,235] {subprocess.py:89} INFO - API_DT.ODA.ODAT.MP.ZS_DS2_en_csv_v2_3161055.csv
+[2021-11-27 06:05:15,235] {subprocess.py:89} INFO - API_DT.ODA.ODAT.PC.ZS_DS2_en_csv_v2_3160336.csv
+[2021-11-27 06:05:15,236] {subprocess.py:89} INFO - API_AG.PRD.LVSK.XD_DS2_en_csv_v2_3161120.csv
+[2021-11-27 06:05:15,236] {subprocess.py:89} INFO - API_AG.LND.FRST.K2_DS2_en_csv_v2_3159335.csv
+[2021-11-27 06:05:15,236] {subprocess.py:89} INFO - API_AG.CON.FERT.ZS_DS2_en_csv_v2_3159437.csv
+[2021-11-27 06:05:15,236] {subprocess.py:89} INFO - API_AG.LND.TOTL.K2_DS2_en_csv_v2_3159087.csv
+[2021-11-27 06:05:15,237] {subprocess.py:89} INFO - API_SP.RUR.TOTL.ZS_DS2_en_csv_v2_3160121.csv
+[2021-11-27 06:05:15,237] {subprocess.py:89} INFO - API_SH.TBS.INCD_DS2_en_csv_v2_3165510.csv
+[2021-11-27 06:05:15,237] {subprocess.py:89} INFO - API_SE.PRM.CMPT.ZS_DS2_en_csv_v2_3163677.csv
+[2021-11-27 06:05:15,237] {subprocess.py:89} INFO - API_SH.DYN.AIDS.ZS_DS2_en_csv_v2_3158949.csv
+[2021-11-27 06:05:15,237] {subprocess.py:89} INFO - API_AG.LND.CREL.HA_DS2_en_csv_v2_3163897.csv
+[2021-11-27 06:05:15,238] {subprocess.py:89} INFO - API_AG.LND.FRST.ZS_DS2_en_csv_v2_3158992.csv
+[2021-11-27 06:05:15,238] {subprocess.py:89} INFO - API_AG.LND.ARBL.ZS_DS2_en_csv_v2_3161161.csv
+[2021-11-27 06:05:15,238] {subprocess.py:89} INFO - API_DT.ODA.ODAT.XP.ZS_DS2_en_csv_v2_3164297.csv
+[2021-11-27 06:05:15,238] {subprocess.py:89} INFO - API_SM.POP.NETM_DS2_en_csv_v2_3158896.csv
+[2021-11-27 06:05:15,238] {subprocess.py:89} INFO - API_SI.POV.DDAY_DS2_en_csv_v2_3160009.csv
+[2021-11-27 06:05:15,239] {subprocess.py:89} INFO - API_AG.LND.TRAC.ZS_DS2_en_csv_v2_3163924.csv
+[2021-11-27 06:05:15,239] {subprocess.py:89} INFO - API_AG.YLD.CREL.KG_DS2_en_csv_v2_3163929.csv
+[2021-11-27 06:05:15,239] {subprocess.py:89} INFO - API_SP.RUR.TOTL_DS2_en_csv_v2_3163192.csv
+[2021-11-27 06:05:15,239] {subprocess.py:89} INFO - API_SE.ENR.PRSC.FM.ZS_DS2_en_csv_v2_3165231.csv
+[2021-11-27 06:05:15,239] {subprocess.py:89} INFO - API_AG.PRD.FOOD.XD_DS2_en_csv_v2_3159905.csv
+[2021-11-27 06:05:15,239] {subprocess.py:89} INFO - API_SL.AGR.EMPL.MA.ZS_DS2_en_csv_v2_3165572.csv
+[2021-11-27 06:05:15,240] {subprocess.py:89} INFO - API_SH.STA.ANVC.ZS_DS2_en_csv_v2_3165465.csv
+[2021-11-27 06:05:15,240] {subprocess.py:89} INFO - API_DT.ODA.ODAT.GI.ZS_DS2_en_csv_v2_3164289.csv
+[2021-11-27 06:05:15,240] {subprocess.py:89} INFO - API_SL.AGR.EMPL.FE.ZS_DS2_en_csv_v2_3165570.csv
+[2021-11-27 06:05:15,240] {subprocess.py:89} INFO - API_AG.SRF.TOTL.K2_DS2_en_csv_v2_3160371.csv
+[2021-11-27 06:05:15,240] {subprocess.py:89} INFO - API_BX.GRT.EXTA.CD.WD_DS2_en_csv_v2_3163964.csv
+[2021-11-27 06:05:15,241] {subprocess.py:89} INFO - API_AG.PRD.CROP.XD_DS2_en_csv_v2_3159593.csv
+[2021-11-27 06:05:15,241] {subprocess.py:89} INFO - API_SI.DST.FRST.20_DS2_en_csv_v2_3165548.csv
+[2021-11-27 06:05:15,241] {subprocess.py:89} INFO - API_AG.LND.ARBL.HA.PC_DS2_en_csv_v2_3163892.csv
+[2021-11-27 06:05:15,241] {subprocess.py:89} INFO - API_AG.LND.AGRI.ZS_DS2_en_csv_v2_3163149.csv
+[2021-11-27 06:05:15,241] {subprocess.py:93} INFO - Command exited with return code 0
+[2021-11-27 06:05:15,258] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=elt, task_id=upload, execution_date=20211126T230400, start_date=20211126T230514, end_date=20211126T230515
+[2021-11-27 06:05:15,290] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-11-27 06:05:15,304] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

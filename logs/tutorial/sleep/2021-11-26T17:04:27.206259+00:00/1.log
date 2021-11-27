@@ -1,0 +1,73 @@
+[2021-11-27 00:05:08,232] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: tutorial.sleep manual__2021-11-26T17:04:27.206259+00:00 [queued]>
+[2021-11-27 00:05:08,240] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: tutorial.sleep manual__2021-11-26T17:04:27.206259+00:00 [queued]>
+[2021-11-27 00:05:08,240] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 00:05:08,240] {taskinstance.py:1242} INFO - Starting attempt 1 of 4
+[2021-11-27 00:05:08,240] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 00:05:08,248] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): sleep> on 2021-11-26 17:04:27.206259+00:00
+[2021-11-27 00:05:08,251] {standard_task_runner.py:52} INFO - Started process 11653 to run task
+[2021-11-27 00:05:08,257] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'tutorial', 'sleep', 'manual__2021-11-26T17:04:27.206259+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/tutorial.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpt17urs7v', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpp0jikw9o']
+[2021-11-27 00:05:08,259] {standard_task_runner.py:77} INFO - Job 7: Subtask sleep
+[2021-11-27 00:05:08,292] {logging_mixin.py:109} INFO - Running <TaskInstance: tutorial.sleep manual__2021-11-26T17:04:27.206259+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-11-27 00:05:08,324] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=tutorial
+AIRFLOW_CTX_TASK_ID=sleep
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-26T17:04:27.206259+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-11-26T17:04:27.206259+00:00
+[2021-11-27 00:05:08,325] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 00:05:08,325] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'sleep 5']
+[2021-11-27 00:05:08,331] {subprocess.py:85} INFO - Output:
+[2021-11-27 00:05:11,435] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 11653
+[2021-11-27 00:05:11,443] {taskinstance.py:1411} ERROR - Received SIGTERM. Terminating subprocesses.
+[2021-11-27 00:05:11,444] {subprocess.py:99} INFO - Sending SIGTERM signal to process group
+[2021-11-27 00:05:11,455] {taskinstance.py:1703} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1332, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1458, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1514, in _execute_task
+    result = execute_callable(context=context)
+  File "/usr/local/lib/python3.9/site-packages/airflow/operators/bash.py", line 178, in execute
+    result = self.subprocess_hook.run_command(
+  File "/usr/local/lib/python3.9/site-packages/airflow/hooks/subprocess.py", line 87, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b''):
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1413, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2021-11-27 00:05:11,464] {taskinstance.py:1270} INFO - Marking task as UP_FOR_RETRY. dag_id=tutorial, task_id=sleep, execution_date=20211126T170427, start_date=20211126T170508, end_date=20211126T170511
+[2021-11-27 00:05:11,472] {standard_task_runner.py:88} ERROR - Failed to execute job 7 for task sleep
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/usr/local/lib/python3.9/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 292, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/usr/local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/usr/local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/usr/local/lib/python3.9/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1332, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1458, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1514, in _execute_task
+    result = execute_callable(context=context)
+  File "/usr/local/lib/python3.9/site-packages/airflow/operators/bash.py", line 178, in execute
+    result = self.subprocess_hook.run_command(
+  File "/usr/local/lib/python3.9/site-packages/airflow/hooks/subprocess.py", line 87, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b''):
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1413, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2021-11-27 00:05:11,500] {process_utils.py:66} INFO - Process psutil.Process(pid=11654, status='terminated', started='00:05:08') (11654) terminated with exit code None
+[2021-11-27 00:05:11,503] {process_utils.py:66} INFO - Process psutil.Process(pid=11653, status='terminated', exitcode=1, started='00:05:08') (11653) terminated with exit code 1

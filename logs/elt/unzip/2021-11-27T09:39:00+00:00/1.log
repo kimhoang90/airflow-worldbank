@@ -1,0 +1,189 @@
+[2021-11-27 17:07:17,632] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.unzip scheduled__2021-11-27T09:39:00+00:00 [queued]>
+[2021-11-27 17:07:17,638] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.unzip scheduled__2021-11-27T09:39:00+00:00 [queued]>
+[2021-11-27 17:07:17,638] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 17:07:17,638] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 17:07:17,638] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 17:07:17,645] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): unzip> on 2021-11-27 09:39:00+00:00
+[2021-11-27 17:07:17,647] {standard_task_runner.py:52} INFO - Started process 20595 to run task
+[2021-11-27 17:07:17,653] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'elt', 'unzip', 'scheduled__2021-11-27T09:39:00+00:00', '--job-id', '1133', '--raw', '--subdir', 'DAGS_FOLDER/processing.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmp3ebccuhm', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpxj_vst28']
+[2021-11-27 17:07:17,655] {standard_task_runner.py:77} INFO - Job 1133: Subtask unzip
+[2021-11-27 17:07:17,683] {logging_mixin.py:109} INFO - Running <TaskInstance: elt.unzip scheduled__2021-11-27T09:39:00+00:00 [running]> on host MacBookPro.local
+[2021-11-27 17:07:17,713] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=elt
+AIRFLOW_CTX_TASK_ID=unzip
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-27T09:39:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-11-27T09:39:00+00:00
+[2021-11-27 17:07:17,714] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 17:07:17,714] {subprocess.py:74} INFO - Running command: ['bash', '-c', '/Users/Home/Airflow/tasks/unzip.py /Users/Home/Airflow/down /Users/Home/Airflow/unzip']
+[2021-11-27 17:07:17,720] {subprocess.py:85} INFO - Output:
+[2021-11-27 17:07:18,395] {subprocess.py:89} INFO - /Users/Home/Airflow/down/unemployment-female-of-female-labor-force-modeled-ilo-estimate.zip
+[2021-11-27 17:07:18,395] {subprocess.py:89} INFO - /Users/Home/Airflow/down/ease-of-doing-business-rank-1-most-business-friendly-regulations.zip
+[2021-11-27 17:07:18,396] {subprocess.py:89} INFO - /Users/Home/Airflow/down/renewable-electricity-output-of-total-electricity-output.zip
+[2021-11-27 17:07:18,396] {subprocess.py:89} INFO - /Users/Home/Airflow/down/time-required-to-get-electricity-days.zip
+[2021-11-27 17:07:18,397] {subprocess.py:89} INFO - /Users/Home/Airflow/down/investment-in-energy-with-private-participation-current-us.zip
+[2021-11-27 17:07:18,397] {subprocess.py:89} INFO - /Users/Home/Airflow/down/external-debt-stocks-of-gni.zip
+[2021-11-27 17:07:18,398] {subprocess.py:89} INFO - /Users/Home/Airflow/down/exports-of-goods-and-services-of-gdp.zip
+[2021-11-27 17:07:18,398] {subprocess.py:89} INFO - /Users/Home/Airflow/down/mammal-species-threatened.zip
+[2021-11-27 17:07:18,398] {subprocess.py:89} INFO - /Users/Home/Airflow/down/total-reserves-includes-gold-current-us.zip
+[2021-11-27 17:07:18,399] {subprocess.py:89} INFO - /Users/Home/Airflow/down/renewable-energy-consumption-of-total-final-energy-consumption.zip
+[2021-11-27 17:07:18,399] {subprocess.py:89} INFO - /Users/Home/Airflow/down/surface-area-sq-km.zip
+[2021-11-27 17:07:18,399] {subprocess.py:89} INFO - /Users/Home/Airflow/down/population-in-urban-agglomerations-of-more-than-1-million-of-total-population.zip
+[2021-11-27 17:07:18,400] {subprocess.py:89} INFO - /Users/Home/Airflow/down/inflation-consumer-prices-annual.zip
+[2021-11-27 17:07:18,400] {subprocess.py:89} INFO - /Users/Home/Airflow/down/livestock-production-index-2014-2016-100.zip
+[2021-11-27 17:07:18,400] {subprocess.py:89} INFO - /Users/Home/Airflow/down/personal-remittances-received-current-us.zip
+[2021-11-27 17:07:18,400] {subprocess.py:89} INFO - /Users/Home/Airflow/down/net-migration.zip
+[2021-11-27 17:07:18,401] {subprocess.py:89} INFO - /Users/Home/Airflow/down/bird-species-threatened.zip
+[2021-11-27 17:07:18,401] {subprocess.py:89} INFO - /Users/Home/Airflow/down/literacy-rate-youth-total-of-people-ages-15-24.zip
+[2021-11-27 17:07:18,402] {subprocess.py:89} INFO - /Users/Home/Airflow/down/maternal-mortality-ratio-modeled-estimate-per-100000-live-births.zip
+[2021-11-27 17:07:18,402] {subprocess.py:89} INFO - /Users/Home/Airflow/down/incidence-of-tuberculosis-per-100000-people.zip
+[2021-11-27 17:07:18,402] {subprocess.py:89} INFO - /Users/Home/Airflow/down/forest-area-of-land-area.zip
+[2021-11-27 17:07:18,403] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gross-intake-ratio-in-first-grade-of-primary-education-female-of-relevant-age-group.zip
+[2021-11-27 17:07:18,403] {subprocess.py:89} INFO - /Users/Home/Airflow/down/trained-teachers-in-primary-education-of-total-teachers.zip
+[2021-11-27 17:07:18,403] {subprocess.py:89} INFO - /Users/Home/Airflow/down/terrestrial-and-marine-protected-areas-of-total-territorial-area.zip
+[2021-11-27 17:07:18,404] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gni-per-capita-atlas-method-current-us.zip
+[2021-11-27 17:07:18,404] {subprocess.py:89} INFO - /Users/Home/Airflow/down/net-oda-received-per-capita-current-us.zip
+[2021-11-27 17:07:18,404] {subprocess.py:89} INFO - /Users/Home/Airflow/down/ppp-conversion-factor-gdp-lcu-per-international.zip
+[2021-11-27 17:07:18,404] {subprocess.py:89} INFO - /Users/Home/Airflow/down/school-enrollment-primary-gross-gender-parity-index-gpi.zip
+[2021-11-27 17:07:18,405] {subprocess.py:89} INFO - /Users/Home/Airflow/down/agriculture-forestry-and-fishing-value-added-of-gdp.zip
+[2021-11-27 17:07:18,405] {subprocess.py:89} INFO - /Users/Home/Airflow/down/energy-intensity-level-of-primary-energy-mj-2011-ppp-gdp.zip
+[2021-11-27 17:07:18,405] {subprocess.py:89} INFO - /Users/Home/Airflow/down/total-debt-service-of-exports-of-goods-services-and-primary-income.zip
+[2021-11-27 17:07:18,405] {subprocess.py:89} INFO - /Users/Home/Airflow/down/mortality-rate-under-5-per-1000-live-births.zip
+[2021-11-27 17:07:18,405] {subprocess.py:89} INFO - /Users/Home/Airflow/down/persistence-to-last-grade-of-primary-male-of-cohort.zip
+[2021-11-27 17:07:18,406] {subprocess.py:89} INFO - /Users/Home/Airflow/down/energy-imports-net-of-energy-use.zip
+[2021-11-27 17:07:18,406] {subprocess.py:89} INFO - /Users/Home/Airflow/down/adjusted-net-savings-including-particulate-emission-damage-of-gni.zip
+[2021-11-27 17:07:18,406] {subprocess.py:89} INFO - /Users/Home/Airflow/down/literacy-rate-youth-female-of-females-ages-15-24.zip
+[2021-11-27 17:07:18,406] {subprocess.py:89} INFO - /Users/Home/Airflow/down/children-out-of-school-primary-female.zip
+[2021-11-27 17:07:18,406] {subprocess.py:89} INFO - /Users/Home/Airflow/down/net-oda-received-of-central-government-expense.zip
+[2021-11-27 17:07:18,407] {subprocess.py:89} INFO - /Users/Home/Airflow/down/external-debt-stocks-private-nonguaranteed-png-dod-current-us.zip
+[2021-11-27 17:07:18,407] {subprocess.py:89} INFO - /Users/Home/Airflow/down/land-under-cereal-production-hectares.zip
+[2021-11-27 17:07:18,407] {subprocess.py:89} INFO - /Users/Home/Airflow/down/fish-species-threatened.zip
+[2021-11-27 17:07:18,407] {subprocess.py:89} INFO - /Users/Home/Airflow/down/annual-freshwater-withdrawals-total-of-internal-resources.zip
+[2021-11-27 17:07:18,407] {subprocess.py:89} INFO - /Users/Home/Airflow/down/co2-emissions-kt.zip
+[2021-11-27 17:07:18,408] {subprocess.py:89} INFO - /Users/Home/Airflow/down/methane-emissions-kt-of-co2-equivalent.zip
+[2021-11-27 17:07:18,408] {subprocess.py:89} INFO - /Users/Home/Airflow/down/grants-excluding-technical-cooperation-bop-current-us.zip
+[2021-11-27 17:07:18,408] {subprocess.py:89} INFO - /Users/Home/Airflow/down/population-living-in-slums-of-urban-population.zip
+[2021-11-27 17:07:18,408] {subprocess.py:89} INFO - /Users/Home/Airflow/down/population-ages-15-64-of-total-population.zip
+[2021-11-27 17:07:18,408] {subprocess.py:89} INFO - /Users/Home/Airflow/down/renewable-internal-freshwater-resources-per-capita-cubic-meters.zip
+[2021-11-27 17:07:18,409] {subprocess.py:89} INFO - /Users/Home/Airflow/down/government-expenditure-per-student-tertiary-of-gdp-per-capita.zip
+[2021-11-27 17:07:18,409] {subprocess.py:89} INFO - /Users/Home/Airflow/down/employment-in-agriculture-male-of-male-employment-modeled-ilo-estimate.zip
+[2021-11-27 17:07:18,409] {subprocess.py:89} INFO - /Users/Home/Airflow/down/net-oda-received-of-gross-capital-formation.zip
+[2021-11-27 17:07:18,409] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gdp-per-capita-ppp-current-international.zip
+[2021-11-27 17:07:18,409] {subprocess.py:89} INFO - /Users/Home/Airflow/down/school-enrollment-secondary-net.zip
+[2021-11-27 17:07:18,410] {subprocess.py:89} INFO - /Users/Home/Airflow/down/renewable-internal-freshwater-resources-total-billion-cubic-meters.zip
+[2021-11-27 17:07:18,410] {subprocess.py:89} INFO - /Users/Home/Airflow/down/foreign-direct-investment-net-inflows-bop-current-us.zip
+[2021-11-27 17:07:18,410] {subprocess.py:89} INFO - /Users/Home/Airflow/down/primary-completion-rate-female-of-relevant-age-group.zip
+[2021-11-27 17:07:18,410] {subprocess.py:89} INFO - /Users/Home/Airflow/down/urban-population.zip
+[2021-11-27 17:07:18,410] {subprocess.py:89} INFO - /Users/Home/Airflow/down/literacy-rate-adult-total-of-people-ages-15-and-above.zip
+[2021-11-27 17:07:18,410] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gdp-current-us.zip
+[2021-11-27 17:07:18,411] {subprocess.py:89} INFO - /Users/Home/Airflow/down/annual-freshwater-withdrawals-total-billion-cubic-meters.zip
+[2021-11-27 17:07:18,411] {subprocess.py:89} INFO - /Users/Home/Airflow/down/revenue-excluding-grants-of-gdp.zip
+[2021-11-27 17:07:18,411] {subprocess.py:89} INFO - /Users/Home/Airflow/down/technical-cooperation-grants-bop-current-us.zip
+[2021-11-27 17:07:18,411] {subprocess.py:89} INFO - /Users/Home/Airflow/down/agricultural-machinery-tractors-per-100-sq-km-of-arable-land.zip
+[2021-11-27 17:07:18,412] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gni-ppp-current-international.zip
+[2021-11-27 17:07:18,412] {subprocess.py:89} INFO - /Users/Home/Airflow/down/ores-and-metals-exports-of-merchandise-exports.zip
+[2021-11-27 17:07:18,412] {subprocess.py:89} INFO - /Users/Home/Airflow/down/price-level-ratio-of-ppp-conversion-factor-gdp-to-market-exchange-rate.zip
+[2021-11-27 17:07:18,412] {subprocess.py:89} INFO - /Users/Home/Airflow/down/fossil-fuel-energy-consumption-of-total.zip
+[2021-11-27 17:07:18,413] {subprocess.py:89} INFO - /Users/Home/Airflow/down/total-greenhouse-gas-emissions-kt-of-co2-equivalent.zip
+[2021-11-27 17:07:18,413] {subprocess.py:89} INFO - /Users/Home/Airflow/down/medium-and-high-tech-manufacturing-value-added-manufacturing-value-added.zip
+[2021-11-27 17:07:18,414] {subprocess.py:89} INFO - /Users/Home/Airflow/down/pregnant-women-receiving-prenatal-care.zip
+[2021-11-27 17:07:18,414] {subprocess.py:89} INFO - /Users/Home/Airflow/down/government-expenditure-per-student-primary-of-gdp-per-capita.zip
+[2021-11-27 17:07:18,414] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gross-savings-of-gdp.zip
+[2021-11-27 17:07:18,414] {subprocess.py:89} INFO - /Users/Home/Airflow/down/labor-force-female-of-total-labor-force.zip
+[2021-11-27 17:07:18,415] {subprocess.py:89} INFO - /Users/Home/Airflow/down/cereal-yield-kg-per-hectare.zip
+[2021-11-27 17:07:18,415] {subprocess.py:89} INFO - /Users/Home/Airflow/down/external-debt-stocks-short-term-dod-current-us.zip
+[2021-11-27 17:07:18,415] {subprocess.py:89} INFO - /Users/Home/Airflow/down/children-out-of-school-primary-male.zip
+[2021-11-27 17:07:18,415] {subprocess.py:89} INFO - /Users/Home/Airflow/down/food-production-index-2014-2016-100.zip
+[2021-11-27 17:07:18,416] {subprocess.py:89} INFO - /Users/Home/Airflow/down/land-area-where-elevation-is-below-5-meters-of-total-land-area.zip
+[2021-11-27 17:07:18,416] {subprocess.py:89} INFO - /Users/Home/Airflow/down/school-enrollment-tertiary-gross.zip
+[2021-11-27 17:07:18,416] {subprocess.py:89} INFO - /Users/Home/Airflow/down/arable-land-hectares-per-person.zip
+[2021-11-27 17:07:18,417] {subprocess.py:89} INFO - /Users/Home/Airflow/down/cpia-public-sector-management-and-institutions-cluster-average-1-low-to-6-high.zip
+[2021-11-27 17:07:18,417] {subprocess.py:89} INFO - /Users/Home/Airflow/down/alternative-and-nuclear-energy-of-total-energy-use.zip
+[2021-11-27 17:07:18,417] {subprocess.py:89} INFO - /Users/Home/Airflow/down/pupil-teacher-ratio-primary.zip
+[2021-11-27 17:07:18,418] {subprocess.py:89} INFO - /Users/Home/Airflow/down/prevalence-of-hiv-total-of-population-ages-15-49.zip
+[2021-11-27 17:07:18,418] {subprocess.py:89} INFO - /Users/Home/Airflow/down/school-enrollment-preprimary-gross.zip
+[2021-11-27 17:07:18,418] {subprocess.py:89} INFO - /Users/Home/Airflow/down/net-oda-received-of-imports-of-goods-services-and-primary-income.zip
+[2021-11-27 17:07:18,418] {subprocess.py:89} INFO - /Users/Home/Airflow/down/labor-force-total.zip
+[2021-11-27 17:07:18,419] {subprocess.py:89} INFO - /Users/Home/Airflow/down/government-expenditure-on-education-total-of-gdp.zip
+[2021-11-27 17:07:18,419] {subprocess.py:89} INFO - /Users/Home/Airflow/down/urban-population-of-total-population.zip
+[2021-11-27 17:07:18,419] {subprocess.py:89} INFO - /Users/Home/Airflow/down/total-natural-resources-rents-of-gdp.zip
+[2021-11-27 17:07:18,419] {subprocess.py:89} INFO - /Users/Home/Airflow/down/industry-including-construction-value-added-of-gdp.zip
+[2021-11-27 17:07:18,420] {subprocess.py:89} INFO - /Users/Home/Airflow/down/literacy-rate-adult-female-of-females-ages-15-and-above.zip
+[2021-11-27 17:07:18,420] {subprocess.py:89} INFO - /Users/Home/Airflow/down/government-expenditure-on-education-total-of-government-expenditure.zip
+[2021-11-27 17:07:18,420] {subprocess.py:89} INFO - /Users/Home/Airflow/down/poverty-headcount-ratio-at-1-90-a-day-2011-ppp-of-population.zip
+[2021-11-27 17:07:18,420] {subprocess.py:89} INFO - /Users/Home/Airflow/down/prevalence-of-underweight-weight-for-age-of-children-under-5.zip
+[2021-11-27 17:07:18,420] {subprocess.py:89} INFO - /Users/Home/Airflow/down/employment-in-agriculture-female-of-female-employment-modeled-ilo-estimate.zip
+[2021-11-27 17:07:18,421] {subprocess.py:89} INFO - /Users/Home/Airflow/down/bank-nonperforming-loans-to-total-gross-loans.zip
+[2021-11-27 17:07:18,421] {subprocess.py:89} INFO - /Users/Home/Airflow/down/ibrd-loans-and-ida-credits-dod-current-us.zip
+[2021-11-27 17:07:18,421] {subprocess.py:89} INFO - /Users/Home/Airflow/down/charges-for-the-use-of-intellectual-property-payments-bop-current-us.zip
+[2021-11-27 17:07:18,421] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gdp-growth-annual.zip
+[2021-11-27 17:07:18,421] {subprocess.py:89} INFO - /Users/Home/Airflow/down/land-area-sq-km.zip
+[2021-11-27 17:07:18,422] {subprocess.py:89} INFO - /Users/Home/Airflow/down/current-account-balance-bop-current-us.zip
+[2021-11-27 17:07:18,422] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gdp-per-unit-of-energy-use-constant-2017-ppp-per-kg-of-oil-equivalent.zip
+[2021-11-27 17:07:18,422] {subprocess.py:89} INFO - /Users/Home/Airflow/down/pm2-5-air-pollution-population-exposed-to-levels-exceeding-who-guideline-value-of-total.zip
+[2021-11-27 17:07:18,422] {subprocess.py:89} INFO - /Users/Home/Airflow/down/population-ages-0-14-of-total-population.zip
+[2021-11-27 17:07:18,423] {subprocess.py:89} INFO - /Users/Home/Airflow/down/repeaters-primary-female-of-female-enrollment.zip
+[2021-11-27 17:07:18,423] {subprocess.py:89} INFO - /Users/Home/Airflow/down/expense-of-gdp.zip
+[2021-11-27 17:07:18,423] {subprocess.py:89} INFO - /Users/Home/Airflow/down/progression-to-secondary-school-male.zip
+[2021-11-27 17:07:18,423] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gdp-per-capita-growth-annual.zip
+[2021-11-27 17:07:18,424] {subprocess.py:89} INFO - /Users/Home/Airflow/down/short-term-debt-of-total-reserves.zip
+[2021-11-27 17:07:18,424] {subprocess.py:89} INFO - /Users/Home/Airflow/down/primary-completion-rate-total-of-relevant-age-group.zip
+[2021-11-27 17:07:18,424] {subprocess.py:89} INFO - /Users/Home/Airflow/down/co2-emissions-metric-tons-per-capita.zip
+[2021-11-27 17:07:18,425] {subprocess.py:89} INFO - /Users/Home/Airflow/down/electric-power-consumption-kwh-per-capita.zip
+[2021-11-27 17:07:18,425] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gross-capital-formation-of-gdp.zip
+[2021-11-27 17:07:18,425] {subprocess.py:89} INFO - /Users/Home/Airflow/down/energy-use-kg-of-oil-equivalent-per-capita.zip
+[2021-11-27 17:07:18,425] {subprocess.py:89} INFO - /Users/Home/Airflow/down/crop-production-index-2014-2016-100.zip
+[2021-11-27 17:07:18,426] {subprocess.py:89} INFO - /Users/Home/Airflow/down/fuel-exports-of-merchandise-exports.zip
+[2021-11-27 17:07:18,426] {subprocess.py:89} INFO - /Users/Home/Airflow/down/prevalence-of-stunting-height-for-age-of-children-under-5.zip
+[2021-11-27 17:07:18,426] {subprocess.py:89} INFO - /Users/Home/Airflow/down/forest-area-sq-km.zip
+[2021-11-27 17:07:18,426] {subprocess.py:89} INFO - /Users/Home/Airflow/down/access-to-electricity-of-population.zip
+[2021-11-27 17:07:18,426] {subprocess.py:89} INFO - /Users/Home/Airflow/down/population-total.zip
+[2021-11-27 17:07:18,426] {subprocess.py:89} INFO - /Users/Home/Airflow/down/use-of-imf-credit-dod-current-us.zip
+[2021-11-27 17:07:18,427] {subprocess.py:89} INFO - /Users/Home/Airflow/down/nitrous-oxide-emissions-thousand-metric-tons-of-co2-equivalent.zip
+[2021-11-27 17:07:18,427] {subprocess.py:89} INFO - /Users/Home/Airflow/down/fertilizer-consumption-kilograms-per-hectare-of-arable-land.zip
+[2021-11-27 17:07:18,428] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gni-atlas-method-current-us.zip
+[2021-11-27 17:07:18,428] {subprocess.py:89} INFO - /Users/Home/Airflow/down/population-living-in-areas-where-elevation-is-below-5-meters-of-total-population.zip
+[2021-11-27 17:07:18,428] {subprocess.py:89} INFO - /Users/Home/Airflow/down/plant-species-higher-threatened.zip
+[2021-11-27 17:07:18,429] {subprocess.py:89} INFO - /Users/Home/Airflow/down/central-government-debt-total-of-gdp.zip
+[2021-11-27 17:07:18,429] {subprocess.py:89} INFO - /Users/Home/Airflow/down/bank-capital-to-assets-ratio.zip
+[2021-11-27 17:07:18,429] {subprocess.py:89} INFO - /Users/Home/Airflow/down/literacy-rate-youth-male-of-males-ages-15-24.zip
+[2021-11-27 17:07:18,429] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gross-intake-ratio-in-first-grade-of-primary-education-male-of-relevant-age-group.zip
+[2021-11-27 17:07:18,429] {subprocess.py:89} INFO - /Users/Home/Airflow/down/automated-teller-machines-atms-per-100000-adults.zip
+[2021-11-27 17:07:18,430] {subprocess.py:89} INFO - /Users/Home/Airflow/down/persistence-to-last-grade-of-primary-female-of-cohort.zip
+[2021-11-27 17:07:18,430] {subprocess.py:89} INFO - /Users/Home/Airflow/down/pm2-5-air-pollution-mean-annual-exposure-micrograms-per-cubic-meter.zip
+[2021-11-27 17:07:18,430] {subprocess.py:89} INFO - /Users/Home/Airflow/down/literacy-rate-adult-male-of-males-ages-15-and-above.zip
+[2021-11-27 17:07:18,430] {subprocess.py:89} INFO - /Users/Home/Airflow/down/unemployment-male-of-male-labor-force-modeled-ilo-estimate.zip
+[2021-11-27 17:07:18,430] {subprocess.py:89} INFO - /Users/Home/Airflow/down/school-enrollment-primary-net.zip
+[2021-11-27 17:07:18,431] {subprocess.py:89} INFO - /Users/Home/Airflow/down/primary-completion-rate-male-of-relevant-age-group.zip
+[2021-11-27 17:07:18,431] {subprocess.py:89} INFO - /Users/Home/Airflow/down/school-enrollment-primary-gross.zip
+[2021-11-27 17:07:18,431] {subprocess.py:89} INFO - /Users/Home/Airflow/down/net-oda-received-of-gni.zip
+[2021-11-27 17:07:18,431] {subprocess.py:89} INFO - /Users/Home/Airflow/down/net-official-development-assistance-received-current-us.zip
+[2021-11-27 17:07:18,431] {subprocess.py:89} INFO - /Users/Home/Airflow/down/charges-for-the-use-of-intellectual-property-receipts-bop-current-us.zip
+[2021-11-27 17:07:18,432] {subprocess.py:89} INFO - /Users/Home/Airflow/down/rural-population.zip
+[2021-11-27 17:07:18,432] {subprocess.py:89} INFO - /Users/Home/Airflow/down/population-growth-annual.zip
+[2021-11-27 17:07:18,432] {subprocess.py:89} INFO - /Users/Home/Airflow/down/agricultural-land-of-land-area.zip
+[2021-11-27 17:07:18,432] {subprocess.py:89} INFO - /Users/Home/Airflow/down/external-debt-stocks-total-dod-current-us.zip
+[2021-11-27 17:07:18,433] {subprocess.py:89} INFO - /Users/Home/Airflow/down/progression-to-secondary-school-female.zip
+[2021-11-27 17:07:18,433] {subprocess.py:89} INFO - /Users/Home/Airflow/down/agricultural-irrigated-land-of-total-agricultural-land.zip
+[2021-11-27 17:07:18,433] {subprocess.py:89} INFO - /Users/Home/Airflow/down/inflation-gdp-deflator-annual.zip
+[2021-11-27 17:07:18,434] {subprocess.py:89} INFO - /Users/Home/Airflow/down/arable-land-of-land-area.zip
+[2021-11-27 17:07:18,434] {subprocess.py:89} INFO - /Users/Home/Airflow/down/external-debt-stocks-public-and-publicly-guaranteed-ppg-dod-current-us.zip
+[2021-11-27 17:07:18,434] {subprocess.py:89} INFO - /Users/Home/Airflow/down/income-share-held-by-lowest-20.zip
+[2021-11-27 17:07:18,435] {subprocess.py:89} INFO - /Users/Home/Airflow/down/unemployment-total-of-total-labor-force-modeled-ilo-estimate.zip
+[2021-11-27 17:07:18,435] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gdp-per-capita-current-us.zip
+[2021-11-27 17:07:18,435] {subprocess.py:89} INFO - /Users/Home/Airflow/down/rural-population-of-total-population.zip
+[2021-11-27 17:07:18,435] {subprocess.py:89} INFO - /Users/Home/Airflow/down/repeaters-primary-male-of-male-enrollment.zip
+[2021-11-27 17:07:18,435] {subprocess.py:89} INFO - /Users/Home/Airflow/down/school-enrollment-secondary-gross.zip
+[2021-11-27 17:07:18,436] {subprocess.py:89} INFO - /Users/Home/Airflow/down/gni-per-capita-ppp-current-international.zip
+[2021-11-27 17:07:18,436] {subprocess.py:89} INFO - /Users/Home/Airflow/down/permanent-cropland-of-land-area.zip
+[2021-11-27 17:07:18,436] {subprocess.py:89} INFO - /Users/Home/Airflow/down/school-enrollment-primary-and-secondary-gross-gender-parity-index-gpi.zip
+[2021-11-27 17:07:18,437] {subprocess.py:89} INFO - /Users/Home/Airflow/down/government-expenditure-per-student-secondary-of-gdp-per-capita.zip
+[2021-11-27 17:07:18,437] {subprocess.py:89} INFO - /Users/Home/Airflow/down/imports-of-goods-and-services-of-gdp.zip
+[2021-11-27 17:07:18,437] {subprocess.py:93} INFO - Command exited with return code 0
+[2021-11-27 17:07:18,455] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=elt, task_id=unzip, execution_date=20211127T093900, start_date=20211127T100717, end_date=20211127T100718
+[2021-11-27 17:07:18,477] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-11-27 17:07:18,527] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

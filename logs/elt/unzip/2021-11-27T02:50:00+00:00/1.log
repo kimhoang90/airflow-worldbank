@@ -1,0 +1,34 @@
+[2021-11-27 09:51:03,204] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.unzip scheduled__2021-11-27T02:50:00+00:00 [queued]>
+[2021-11-27 09:51:03,211] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.unzip scheduled__2021-11-27T02:50:00+00:00 [queued]>
+[2021-11-27 09:51:03,212] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 09:51:03,212] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 09:51:03,212] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 09:51:03,226] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): unzip> on 2021-11-27 02:50:00+00:00
+[2021-11-27 09:51:03,229] {standard_task_runner.py:52} INFO - Started process 5068 to run task
+[2021-11-27 09:51:03,236] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'elt', 'unzip', 'scheduled__2021-11-27T02:50:00+00:00', '--job-id', '233', '--raw', '--subdir', 'DAGS_FOLDER/processing.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpp4jvw_tx', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmp3u87efd7']
+[2021-11-27 09:51:03,239] {standard_task_runner.py:77} INFO - Job 233: Subtask unzip
+[2021-11-27 09:51:03,294] {logging_mixin.py:109} INFO - Running <TaskInstance: elt.unzip scheduled__2021-11-27T02:50:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-11-27 09:51:03,343] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=elt
+AIRFLOW_CTX_TASK_ID=unzip
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-27T02:50:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-11-27T02:50:00+00:00
+[2021-11-27 09:51:03,344] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 09:51:03,347] {subprocess.py:74} INFO - Running command: ['bash', '-c', '/Users/Home/Airflow/tasks/unzip.py /Users/Home/Airflow/down /Users/Home/Airflow/unzip']
+[2021-11-27 09:51:03,355] {subprocess.py:85} INFO - Output:
+[2021-11-27 09:51:03,489] {subprocess.py:89} INFO - /Users/Home/Airflow/down/net-migration.zip
+[2021-11-27 09:51:03,492] {subprocess.py:89} INFO - /Users/Home/Airflow/down/net-oda-received-per-capita-current-us.zip
+[2021-11-27 09:51:03,493] {subprocess.py:89} INFO - /Users/Home/Airflow/down/pregnant-women-receiving-prenatal-care.zip
+[2021-11-27 09:51:03,493] {subprocess.py:89} INFO - /Users/Home/Airflow/down/prevalence-of-hiv-total-of-population-ages-15-49.zip
+[2021-11-27 09:51:03,493] {subprocess.py:89} INFO - /Users/Home/Airflow/down/poverty-headcount-ratio-at-1-90-a-day-2011-ppp-of-population.zip
+[2021-11-27 09:51:03,494] {subprocess.py:89} INFO - /Users/Home/Airflow/down/prevalence-of-stunting-height-for-age-of-children-under-5.zip
+[2021-11-27 09:51:03,494] {subprocess.py:89} INFO - /Users/Home/Airflow/down/net-official-development-assistance-received-current-us.zip
+[2021-11-27 09:51:03,502] {subprocess.py:93} INFO - Command exited with return code 0
+[2021-11-27 09:51:03,533] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=elt, task_id=unzip, execution_date=20211127T025000, start_date=20211127T025103, end_date=20211127T025103
+[2021-11-27 09:51:03,584] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-11-27 09:51:03,638] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

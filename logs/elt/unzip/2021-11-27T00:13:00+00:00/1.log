@@ -1,0 +1,14 @@
+[2021-11-27 07:14:18,523] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.unzip scheduled__2021-11-27T00:13:00+00:00 [queued]>
+[2021-11-27 07:14:18,530] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.unzip scheduled__2021-11-27T00:13:00+00:00 [queued]>
+[2021-11-27 07:14:18,530] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 07:14:18,530] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 07:14:18,530] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 07:14:18,540] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): unzip> on 2021-11-27 00:13:00+00:00
+[2021-11-27 07:14:18,543] {standard_task_runner.py:52} INFO - Started process 3630 to run task
+[2021-11-27 07:14:18,548] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'elt', 'unzip', 'scheduled__2021-11-27T00:13:00+00:00', '--job-id', '128', '--raw', '--subdir', 'DAGS_FOLDER/processing.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpkx_myd_j', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmp8uimxwr0']
+[2021-11-27 07:14:18,550] {standard_task_runner.py:77} INFO - Job 128: Subtask unzip
+[2021-11-27 07:14:23,569] {local_task_job.py:211} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2021-11-27 07:14:23,574] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 3630
+[2021-11-27 07:14:23,579] {process_utils.py:66} INFO - Process psutil.Process(pid=3630, status='terminated', exitcode=<Negsignal.SIGTERM: -15>, started='07:14:18') (3630) terminated with exit code Negsignal.SIGTERM

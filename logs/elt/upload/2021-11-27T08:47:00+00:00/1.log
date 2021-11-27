@@ -1,0 +1,27 @@
+[2021-11-27 15:48:09,921] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.upload scheduled__2021-11-27T08:47:00+00:00 [queued]>
+[2021-11-27 15:48:09,927] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.upload scheduled__2021-11-27T08:47:00+00:00 [queued]>
+[2021-11-27 15:48:09,927] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 15:48:09,927] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 15:48:09,927] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 15:48:09,934] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): upload> on 2021-11-27 08:47:00+00:00
+[2021-11-27 15:48:09,937] {standard_task_runner.py:52} INFO - Started process 18137 to run task
+[2021-11-27 15:48:09,941] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'elt', 'upload', 'scheduled__2021-11-27T08:47:00+00:00', '--job-id', '978', '--raw', '--subdir', 'DAGS_FOLDER/processing.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmp2j5hg7l5', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpy3hoc8_2']
+[2021-11-27 15:48:09,943] {standard_task_runner.py:77} INFO - Job 978: Subtask upload
+[2021-11-27 15:48:09,972] {logging_mixin.py:109} INFO - Running <TaskInstance: elt.upload scheduled__2021-11-27T08:47:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-11-27 15:48:09,998] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=elt
+AIRFLOW_CTX_TASK_ID=upload
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-27T08:47:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-11-27T08:47:00+00:00
+[2021-11-27 15:48:09,999] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 15:48:09,999] {subprocess.py:74} INFO - Running command: ['bash', '-c', '/Users/Home/Airflow/tasks/cleaning.py /Users/Home/Airflow/output worldbank']
+[2021-11-27 15:48:10,005] {subprocess.py:85} INFO - Output:
+[2021-11-27 15:48:10,054] {subprocess.py:93} INFO - Command exited with return code 0
+[2021-11-27 15:48:10,067] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=elt, task_id=upload, execution_date=20211127T084700, start_date=20211127T084809, end_date=20211127T084810
+[2021-11-27 15:48:10,079] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-11-27 15:48:10,094] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

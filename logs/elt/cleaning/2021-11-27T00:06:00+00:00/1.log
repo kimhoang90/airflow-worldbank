@@ -1,0 +1,27 @@
+[2021-11-27 07:08:01,615] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.cleaning scheduled__2021-11-27T00:06:00+00:00 [queued]>
+[2021-11-27 07:08:01,622] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.cleaning scheduled__2021-11-27T00:06:00+00:00 [queued]>
+[2021-11-27 07:08:01,622] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 07:08:01,622] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 07:08:01,622] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 07:08:01,631] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): cleaning> on 2021-11-27 00:06:00+00:00
+[2021-11-27 07:08:01,635] {standard_task_runner.py:52} INFO - Started process 3462 to run task
+[2021-11-27 07:08:01,642] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'elt', 'cleaning', 'scheduled__2021-11-27T00:06:00+00:00', '--job-id', '106', '--raw', '--subdir', 'DAGS_FOLDER/processing.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpk5cu24nc', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmp6jmdr_qp']
+[2021-11-27 07:08:01,644] {standard_task_runner.py:77} INFO - Job 106: Subtask cleaning
+[2021-11-27 07:08:06,678] {logging_mixin.py:109} INFO - Running <TaskInstance: elt.cleaning scheduled__2021-11-27T00:06:00+00:00 [running]> on host MacBookPro.local
+[2021-11-27 07:08:11,711] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=elt
+AIRFLOW_CTX_TASK_ID=cleaning
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-27T00:06:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-11-27T00:06:00+00:00
+[2021-11-27 07:08:11,712] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 07:08:11,713] {subprocess.py:74} INFO - Running command: ['bash', '-c', '/Users/Home/Airflow/tasks/cleaning.py /Users/Home/Airflow/unzip /Users/Home/Airflow/output']
+[2021-11-27 07:08:11,718] {subprocess.py:85} INFO - Output:
+[2021-11-27 07:08:11,764] {subprocess.py:93} INFO - Command exited with return code 0
+[2021-11-27 07:08:11,777] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=elt, task_id=cleaning, execution_date=20211127T000600, start_date=20211127T000801, end_date=20211127T000811
+[2021-11-27 07:08:11,794] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-11-27 07:08:11,809] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

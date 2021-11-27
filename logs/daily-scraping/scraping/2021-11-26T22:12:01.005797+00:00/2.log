@@ -1,0 +1,75 @@
+[2021-11-27 05:14:03,616] {taskinstance.py:1025} INFO - Dependencies not met for <TaskInstance: daily-scraping.scraping manual__2021-11-26T22:12:01.005797+00:00 [up_for_retry]>, dependency 'Not In Retry Period' FAILED: Task is not ready for retry yet but will be retried automatically. Current date is 2021-11-26T22:14:03.616247+00:00 and task will be retried at 2021-11-26T22:19:00.697462+00:00.
+[2021-11-27 05:14:03,620] {local_task_job.py:99} INFO - Task is not able to be run
+[2021-11-27 05:21:58,815] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: daily-scraping.scraping manual__2021-11-26T22:12:01.005797+00:00 [queued]>
+[2021-11-27 05:21:58,821] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: daily-scraping.scraping manual__2021-11-26T22:12:01.005797+00:00 [queued]>
+[2021-11-27 05:21:58,821] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 05:21:58,822] {taskinstance.py:1242} INFO - Starting attempt 2 of 2
+[2021-11-27 05:21:58,822] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 05:21:58,828] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): scraping> on 2021-11-26 22:12:01.005797+00:00
+[2021-11-27 05:21:58,830] {standard_task_runner.py:52} INFO - Started process 20658 to run task
+[2021-11-27 05:21:58,835] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'daily-scraping', 'scraping', 'manual__2021-11-26T22:12:01.005797+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/scraping.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpngdtxvzt', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpm6swa8dd']
+[2021-11-27 05:21:58,837] {standard_task_runner.py:77} INFO - Job 27: Subtask scraping
+[2021-11-27 05:21:58,864] {logging_mixin.py:109} INFO - Running <TaskInstance: daily-scraping.scraping manual__2021-11-26T22:12:01.005797+00:00 [running]> on host MacBookPro.local
+[2021-11-27 05:21:58,888] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=daily-scraping
+AIRFLOW_CTX_TASK_ID=scraping
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-26T22:12:01.005797+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-11-26T22:12:01.005797+00:00
+[2021-11-27 05:21:58,889] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 05:21:58,889] {subprocess.py:74} INFO - Running command: ['bash', '-c', '/Users/Home/Airflow/tasks/scraping.py /Users/Home/Airflow/down']
+[2021-11-27 05:21:58,897] {subprocess.py:85} INFO - Output:
+[2021-11-27 05:25:13,107] {process_utils.py:100} INFO - Sending Signals.SIGTERM to GPID 20658
+[2021-11-27 05:25:13,110] {taskinstance.py:1411} ERROR - Received SIGTERM. Terminating subprocesses.
+[2021-11-27 05:25:13,113] {subprocess.py:99} INFO - Sending SIGTERM signal to process group
+[2021-11-27 05:25:13,146] {taskinstance.py:1703} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1332, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1458, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1514, in _execute_task
+    result = execute_callable(context=context)
+  File "/usr/local/lib/python3.9/site-packages/airflow/operators/bash.py", line 178, in execute
+    result = self.subprocess_hook.run_command(
+  File "/usr/local/lib/python3.9/site-packages/airflow/hooks/subprocess.py", line 87, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b''):
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1413, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2021-11-27 05:25:13,160] {taskinstance.py:1270} INFO - Marking task as FAILED. dag_id=daily-scraping, task_id=scraping, execution_date=20211126T221201, start_date=20211126T222158, end_date=20211126T222513
+[2021-11-27 05:25:13,175] {standard_task_runner.py:88} ERROR - Failed to execute job 27 for task scraping
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/usr/local/lib/python3.9/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 292, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/usr/local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/usr/local/lib/python3.9/site-packages/airflow/cli/commands/task_command.py", line 180, in _run_raw_task
+    ti._run_raw_task(
+  File "/usr/local/lib/python3.9/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1332, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1458, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1514, in _execute_task
+    result = execute_callable(context=context)
+  File "/usr/local/lib/python3.9/site-packages/airflow/operators/bash.py", line 178, in execute
+    result = self.subprocess_hook.run_command(
+  File "/usr/local/lib/python3.9/site-packages/airflow/hooks/subprocess.py", line 87, in run_command
+    for raw_line in iter(self.sub_process.stdout.readline, b''):
+  File "/usr/local/lib/python3.9/site-packages/airflow/models/taskinstance.py", line 1413, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2021-11-27 05:25:13,206] {process_utils.py:66} INFO - Process psutil.Process(pid=20658, status='terminated', exitcode=1, started='05:21:58') (20658) terminated with exit code 1
+[2021-11-27 05:25:13,207] {process_utils.py:66} INFO - Process psutil.Process(pid=20659, status='terminated', started='05:21:58') (20659) terminated with exit code None

@@ -1,0 +1,27 @@
+[2021-11-27 06:13:22,177] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.unzip scheduled__2021-11-26T23:12:00+00:00 [queued]>
+[2021-11-27 06:13:22,183] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: elt.unzip scheduled__2021-11-26T23:12:00+00:00 [queued]>
+[2021-11-27 06:13:22,183] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 06:13:22,184] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 06:13:22,184] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 06:13:22,191] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): unzip> on 2021-11-26 23:12:00+00:00
+[2021-11-27 06:13:22,193] {standard_task_runner.py:52} INFO - Started process 1870 to run task
+[2021-11-27 06:13:22,197] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'elt', 'unzip', 'scheduled__2021-11-26T23:12:00+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/processing.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpidt8m4vk', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpdz9fmk7i']
+[2021-11-27 06:13:22,199] {standard_task_runner.py:77} INFO - Job 18: Subtask unzip
+[2021-11-27 06:13:22,229] {logging_mixin.py:109} INFO - Running <TaskInstance: elt.unzip scheduled__2021-11-26T23:12:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-11-27 06:13:22,256] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=elt
+AIRFLOW_CTX_TASK_ID=unzip
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-26T23:12:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-11-26T23:12:00+00:00
+[2021-11-27 06:13:22,257] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 06:13:22,258] {subprocess.py:74} INFO - Running command: ['bash', '-c', '/Users/Home/Airflow/tasks/unzip.py /Users/Home/Airflow/down /Users/Home/Airflow/unzip']
+[2021-11-27 06:13:22,263] {subprocess.py:85} INFO - Output:
+[2021-11-27 06:13:22,317] {subprocess.py:93} INFO - Command exited with return code 0
+[2021-11-27 06:13:22,330] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=elt, task_id=unzip, execution_date=20211126T231200, start_date=20211126T231322, end_date=20211126T231322
+[2021-11-27 06:13:22,380] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-11-27 06:13:22,399] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

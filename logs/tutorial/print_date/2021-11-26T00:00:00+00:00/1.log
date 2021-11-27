@@ -1,0 +1,84 @@
+[2021-11-27 00:03:26,844] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: tutorial.print_date scheduled__2021-11-26T00:00:00+00:00 [queued]>
+[2021-11-27 00:03:26,851] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: tutorial.print_date scheduled__2021-11-26T00:00:00+00:00 [queued]>
+[2021-11-27 00:03:26,852] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 00:03:26,852] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 00:03:26,852] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 00:03:26,859] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): print_date> on 2021-11-26 00:00:00+00:00
+[2021-11-27 00:03:26,862] {standard_task_runner.py:52} INFO - Started process 11567 to run task
+[2021-11-27 00:03:26,866] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'tutorial', 'print_date', 'scheduled__2021-11-26T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/tutorial.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpf7u2v8pt', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmp17z8m1cv']
+[2021-11-27 00:03:26,868] {standard_task_runner.py:77} INFO - Job 2: Subtask print_date
+[2021-11-27 00:03:26,898] {logging_mixin.py:109} INFO - Running <TaskInstance: tutorial.print_date scheduled__2021-11-26T00:00:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-11-27 00:03:26,927] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=tutorial
+AIRFLOW_CTX_TASK_ID=print_date
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-26T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-11-26T00:00:00+00:00
+[2021-11-27 00:03:26,928] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 00:03:26,928] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'date']
+[2021-11-27 00:03:26,933] {subprocess.py:85} INFO - Output:
+[2021-11-27 00:03:26,940] {subprocess.py:89} INFO - Sat Nov 27 00:03:26 +07 2021
+[2021-11-27 00:03:26,941] {subprocess.py:93} INFO - Command exited with return code 0
+[2021-11-27 00:03:26,955] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=tutorial, task_id=print_date, execution_date=20211126T000000, start_date=20211126T170326, end_date=20211126T170326
+[2021-11-27 00:03:27,009] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-11-27 00:03:27,032] {local_task_job.py:264} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2021-11-27 00:04:54,863] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: tutorial.print_date scheduled__2021-11-26T00:00:00+00:00 [queued]>
+[2021-11-27 00:04:54,870] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: tutorial.print_date scheduled__2021-11-26T00:00:00+00:00 [queued]>
+[2021-11-27 00:04:54,870] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 00:04:54,870] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 00:04:54,870] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 00:04:54,877] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): print_date> on 2021-11-26 00:00:00+00:00
+[2021-11-27 00:04:54,879] {standard_task_runner.py:52} INFO - Started process 11638 to run task
+[2021-11-27 00:04:54,884] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'tutorial', 'print_date', 'scheduled__2021-11-26T00:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/tutorial.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpbm5mwf12', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpl440127y']
+[2021-11-27 00:04:54,886] {standard_task_runner.py:77} INFO - Job 3: Subtask print_date
+[2021-11-27 00:04:54,911] {logging_mixin.py:109} INFO - Running <TaskInstance: tutorial.print_date scheduled__2021-11-26T00:00:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-11-27 00:04:54,936] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=tutorial
+AIRFLOW_CTX_TASK_ID=print_date
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-26T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-11-26T00:00:00+00:00
+[2021-11-27 00:04:54,937] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 00:04:54,937] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'date']
+[2021-11-27 00:04:54,944] {subprocess.py:85} INFO - Output:
+[2021-11-27 00:04:54,953] {subprocess.py:89} INFO - Sat Nov 27 00:04:54 +07 2021
+[2021-11-27 00:04:54,954] {subprocess.py:93} INFO - Command exited with return code 0
+[2021-11-27 00:04:54,967] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=tutorial, task_id=print_date, execution_date=20211126T000000, start_date=20211126T170454, end_date=20211126T170454
+[2021-11-27 00:04:54,981] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-11-27 00:04:54,999] {local_task_job.py:264} INFO - 2 downstream tasks scheduled from follow-on schedule check
+[2021-11-27 00:05:59,614] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: tutorial.print_date scheduled__2021-11-26T00:00:00+00:00 [queued]>
+[2021-11-27 00:05:59,620] {taskinstance.py:1035} INFO - Dependencies all met for <TaskInstance: tutorial.print_date scheduled__2021-11-26T00:00:00+00:00 [queued]>
+[2021-11-27 00:05:59,621] {taskinstance.py:1241} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 00:05:59,621] {taskinstance.py:1242} INFO - Starting attempt 1 of 2
+[2021-11-27 00:05:59,621] {taskinstance.py:1243} INFO - 
+--------------------------------------------------------------------------------
+[2021-11-27 00:05:59,627] {taskinstance.py:1262} INFO - Executing <Task(BashOperator): print_date> on 2021-11-26 00:00:00+00:00
+[2021-11-27 00:05:59,629] {standard_task_runner.py:52} INFO - Started process 11702 to run task
+[2021-11-27 00:05:59,633] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'tutorial', 'print_date', 'scheduled__2021-11-26T00:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/tutorial.py', '--cfg-path', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmpnehskc3j', '--error-file', '/var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T/tmptav_93uu']
+[2021-11-27 00:05:59,635] {standard_task_runner.py:77} INFO - Job 2: Subtask print_date
+[2021-11-27 00:05:59,664] {logging_mixin.py:109} INFO - Running <TaskInstance: tutorial.print_date scheduled__2021-11-26T00:00:00+00:00 [running]> on host 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
+[2021-11-27 00:05:59,692] {taskinstance.py:1427} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=airflow@example.com
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=tutorial
+AIRFLOW_CTX_TASK_ID=print_date
+AIRFLOW_CTX_EXECUTION_DATE=2021-11-26T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-11-26T00:00:00+00:00
+[2021-11-27 00:05:59,692] {subprocess.py:62} INFO - Tmp dir root location: 
+ /var/folders/hj/g8v71bv11_gb814qbbwch8zc0000gn/T
+[2021-11-27 00:05:59,694] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'date']
+[2021-11-27 00:05:59,700] {subprocess.py:85} INFO - Output:
+[2021-11-27 00:05:59,704] {subprocess.py:89} INFO - Sat Nov 27 00:05:59 +07 2021
+[2021-11-27 00:05:59,704] {subprocess.py:93} INFO - Command exited with return code 0
+[2021-11-27 00:05:59,717] {taskinstance.py:1270} INFO - Marking task as SUCCESS. dag_id=tutorial, task_id=print_date, execution_date=20211126T000000, start_date=20211126T170559, end_date=20211126T170559
+[2021-11-27 00:05:59,734] {local_task_job.py:154} INFO - Task exited with return code 0
+[2021-11-27 00:05:59,753] {local_task_job.py:264} INFO - 2 downstream tasks scheduled from follow-on schedule check
